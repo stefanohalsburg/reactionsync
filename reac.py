@@ -180,11 +180,9 @@ class ReactionSync:
         try:
             if self.player_B and self.sync_point:
                 if self.player_B.time_pos > self.player_B.duration - 0.1 and self.player_B.pause == False:
-                    #self.player_B.time_pos = self.player_B.duration - 0.1
                     self.player_B.pause = True
                 elif self.player_A.time_pos >= self.sync_point and self.player_B.time_pos < self.player_B.duration - 1 and self.player_B.pause != self.player_A.pause:
                     self.player_B.pause = self.player_A.pause
-                    #self._update_player_B_position()
         except:
             self.on_close_GUI()
             
