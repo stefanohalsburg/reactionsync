@@ -133,12 +133,6 @@ class ReactionSync:
     def on_close_GUI(self):
         self.master.destroy()
 
-    def on_quit_mpv_A(self, name, value):
-        if not self.player_A.duration:
-            if not self.ignore_first_eof_A:
-                self.master.destroy()
-            self.ignore_first_eof_A = False
-
     def on_pause_A(self, name, value):
         if self.player_B and self.sync_point:
             self.player_B.pause = self.player_A.pause
