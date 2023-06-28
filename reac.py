@@ -83,7 +83,7 @@ class ReactionSync:
         self.status_label.config(text="Synced!")
 
     def browse_file(self, file_label, video_file_var):
-        filetypes = (("Video files", "*.mp4 *.avi *.mkv"), ("All files", "*.*"))
+        filetypes = (("Video files", "*.mp4 *.webm *.mkv"), ("All files", "*.*"))
         filepath = fd.askopenfilename(filetypes=filetypes)
         if filepath:
             setattr(self, video_file_var, filepath)
